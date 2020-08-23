@@ -1,0 +1,22 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Транслятор</title>
+</head>
+<body>
+<form method="post" action="saveText.php" name="text_form">
+    <div id="count_char_block">
+        <textarea name="text" id="count_char_textarea" onchange="countChar()" onkeyup="countChar()" ></textarea><br/>
+        <input name="count" type="text" id="count_char" value="0"/>
+        <input type="checkbox"  id="translator" onchange="translation()"/>
+        <label for="translator">Транслитировать</label>
+        <input name="trans" value="ru" type="text" id="trans">
+        <label for="trans">Язык</label>
+        <div>Количество сообщений: <span  id="count_sms">0</span></div>
+        <input id="save" type="submit" value="загрузить">
+    </div>
+
+</form>
+<script src="translator.js"></script>
+</body>
+</html>
